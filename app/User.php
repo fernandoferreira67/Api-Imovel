@@ -41,4 +41,19 @@ class User extends Authenticatable
     {
     	return $this->hasMany(RealState::class);
     }
+
+    public function profile()
+    {
+    	return $this->hasOne(UserProfile::class);
+    }
+
+    // public function getJWTIdentifier()
+    // {
+    // 	return $this->getKey();
+    // }
+
+    // public function getJWTCustomClaims()
+    // {
+	// 	return [];
+    // }
 }
